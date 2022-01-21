@@ -6,9 +6,9 @@ https://templatemo.com/tm-532-next-level
 
 	COLORS:
 		Primary: #ca9acd
-		Secondary: #669999 
+		Secondary: #669999
     Gray: #CFD0D1
-    
+
   SPACING:
     pt = padding top
     pb = padding bottom
@@ -268,7 +268,7 @@ ul.tm-list-plus li:before {
 }
 
 .tm-small-parallax {
-  min-height: 240px; 
+  min-height: 240px;
   background: transparent;
 }
 
@@ -403,7 +403,7 @@ ul.tm-list-plus li:before {
   padding: 40px 60px;
   width: auto;
   display: inline-block;
-  text-align: center;  
+  text-align: center;
 }
 
 .tm-gallery {
@@ -418,7 +418,7 @@ ul.tm-list-plus li:before {
 
 .filters-button-group { padding-right: 15px; }
 
-/* 
+/*
   Gallery Item Hover Effect
   https://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/
 */
@@ -661,11 +661,11 @@ figure.effect-bubba:hover p {
 	-webkit-appearance: none;
 	-mox-appearance: none;
 	font-size: 1rem;
-	color: #669999;	
+	color: #669999;
 	background: url("../img/select-arrow.png") no-repeat right center;
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid #98999A;		    
+	border-bottom: 1px solid #98999A;
 	border-radius: 0;
 	width: 100%;
 	height: 50px;
@@ -713,21 +713,21 @@ figure.effect-bubba:hover p {
     pointer-events: none;
 }
 
-[type="radio"]:not(:checked)+span:before, 
+[type="radio"]:not(:checked)+span:before,
 [type="radio"]:not(:checked)+span:after {
     border: 2px solid #A6A7A8;
 }
 
-[type="radio"]:not(:checked)+span:before, 
-[type="radio"]:not(:checked)+span:after, 
-[type="radio"]:checked+span:before, 
-[type="radio"]:checked+span:after, 
-[type="radio"].with-gap:checked+span:before, 
+[type="radio"]:not(:checked)+span:before,
+[type="radio"]:not(:checked)+span:after,
+[type="radio"]:checked+span:before,
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
 [type="radio"].with-gap:checked+span:after {
     border-radius: 50%;
 }
 
-[type="radio"]+span:before, 
+[type="radio"]+span:before,
 [type="radio"]+span:after {
     content: '';
     position: absolute;
@@ -741,7 +741,7 @@ figure.effect-bubba:hover p {
     transition: .28s ease;
 }
 
-[type="radio"] + span:before, 
+[type="radio"] + span:before,
 [type="radio"] + span:after {
     border-color: #686868;
     width: 25px;
@@ -749,7 +749,7 @@ figure.effect-bubba:hover p {
     top: -4px;
 }
 
-[type="radio"]:not(:checked)+span, 
+[type="radio"]:not(:checked)+span,
 [type="radio"]:checked+span {
     position: relative;
     padding-left: 45px;
@@ -766,7 +766,7 @@ figure.effect-bubba:hover p {
     user-select: none;
 }
 
-[type="radio"]:checked + span, 
+[type="radio"]:checked + span,
 [type="checkbox"].filled-in:checked + span {
     color: #669999;
 }
@@ -775,13 +775,13 @@ figure.effect-bubba:hover p {
     border: 2px solid transparent;
 }
 
-[type="radio"]:checked+span:after, 
-[type="radio"].with-gap:checked+span:before, 
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
 [type="radio"].with-gap:checked+span:after {
     border: 2px solid #669999;
 }
 
-[type="radio"]:checked+span:after, 
+[type="radio"]:checked+span:after,
 [type="radio"].with-gap:checked+span:after {
     background-color: #669999;
 }
@@ -795,14 +795,14 @@ figure.effect-bubba:hover p {
 
 /* Checkbox */
 
-[type="checkbox"]:not(:checked), 
+[type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 
-[type="checkbox"]+span:not(.lever):before, 
+[type="checkbox"]+span:not(.lever):before,
 [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
     content: '';
     position: absolute;
@@ -818,7 +818,7 @@ figure.effect-bubba:hover p {
     transition: .2s;
 }
 
-[type="checkbox"].filled-in+span:not(.lever):before, 
+[type="checkbox"].filled-in+span:not(.lever):before,
 [type="checkbox"].filled-in+span:not(.lever):after {
     content: '';
     left: 0;
@@ -844,7 +844,7 @@ figure.effect-bubba:hover p {
     border-radius: 2px;
 }
 
-[type="checkbox"].filled-in+span:not(.lever):before, 
+[type="checkbox"].filled-in+span:not(.lever):before,
 [type="checkbox"].filled-in+span:not(.lever):after {
     content: '';
     left: 0;
@@ -863,7 +863,7 @@ figure.effect-bubba:hover p {
     z-index: 0;
 }
 
-[type="checkbox"].filled-in:checked + span:not(.lever):after, 
+[type="checkbox"].filled-in:checked + span:not(.lever):after,
 [type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
     width: 35px;
     height: 35px;
@@ -938,13 +938,13 @@ figure.effect-bubba:hover p {
 /* end Checkbox */
 
 textarea.form-control {
-  border-color: #669999; 
+  border-color: #669999;
   padding: 15px 20px;
 }
 
 .file-upload-container {
 	display: flex;
-	justify-content: space-between;	
+	justify-content: space-between;
 }
 
 .btn-outline {
@@ -985,5 +985,7 @@ textarea.form-control {
 	font-size: 1.2rem;
 	padding: 12px 40px;
 }
+
+
 
 /* end Contact */
