@@ -1,0 +1,77 @@
+---
+title: "Analysis on job vacancies in Singapore"
+author: "Tay Jiakang, Mila"
+date: "1/2022"
+output:
+  html_document: default
+  pdf_document: default
+  theme: downcute
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE}
+  library(readxl)
+  library("tidyr")
+  library(ggplot2)
+  library("dplyr")
+```
+
+## R Markdown
+
+This is a sample report on the trends of unemployment in Singapore. 
+We will try to determine the current employment siutation in Singapore based on data obtained from the government database 
+
+```{r echo=FALSE}
+setwd("/Users/User/OneDrive2/OneDrive - National University of Singapore/NUS/CV/SAMPLE/employment")
+library(readxl)
+#import excel file into RStudio
+Job_Data <- read_excel("unemploymentdata.xlsx", sheet = "job-vacancy-by-broad-occupation", skip = 0)
+names(Job_Data)[names(Job_Data) == 'occupation1'] <- 'occupation'
+df <- Job_Data 
+```
+## Describing the data set
+The data contains job vacancies From the dataset, we have a total of `r nrow(Job_Data)` values. The headers are `r colnames(Job_Data)`
+
+## Overview of data 
+
+You can also embed plots, for example:
+
+```{r  echo=FALSE}
+ggplot(df,aes(quarter,job_vacancy, color = occupation)) + geom_point(size = 2, alpha = 0.4) + labs(title = "Overrall change between the 3 occupational groups", x = "Quaters", y = "Vacancies" )+theme(axis.text.x = element_blank()) 
+```
+
+Based on the graph, we can notice that for the job vacancies there is a general decrease in vacancies in clerical and production work, with an increase of professional roles. Thus could suggest a shift in industries in Singapore, leading to a change in workers demand. 
+
+We notice that at the end of the graph, we have a large uptick, we will seek to find out more on the reason behind it. 
+
+## Close up analysis for more recent time period between 2010 to 2021 for the professional catergory. 
+```{r  echo=FALSE}
+#241
+dfp <- Job_Data[341:382,] %>% filter(occupation == "professional, managers, executive and technicians")
+ggplot(dfp,aes(quarter,job_vacancy,group = 1)) + geom_line() + labs(title = "Change between 2019 Q3 to 2021 Q3 for professionals", x = "Quaters", y = "Vacancies" ) +theme(axis.text.x = element_text(size=5),) 
+```
+
+We notice that there is a significant uptick starting in 2020 Q4. We seek secondary data for possible
+explanations. [Straits Times article ](https://www.straitstimes.com/singapore/jobs/job-vacancies-in-singapore-hit-record-high-of-92100-in-june-mom) This suggests that it is likely due to border restrictions resulting in less foreign talents to meet the industry demands, 
+
+## Exploring unemployment rates 
+
+```{r echo=FALSE}
+setwd("/Users/User/OneDrive2/OneDrive - National University of Singapore/NUS/CV/SAMPLE/employment")
+library(readxl)
+df2 <- read_excel("ratiod.xlsx", sheet = "s", skip = 0)
+```
+We shall seek to determine the severity of the situation using the ratio of job vacancies to those that are unemployed.
+
+```{r  echo=FALSE}
+#241
+df3 <- df2[68:79,] 
+ggplot(df3,aes(quarter,jv_to_ue,group = 1)) + geom_point(size = 2) + geom_line() + labs(title = "Change between 2019 Q3 to 2021 Q3 for vacancies to unemployment rate", x = "Quaters", y = "Vacancies" ) +theme(axis.text.x = element_text(size=5))  + geom_hline(yintercept=1, linetype="dashed", color = "red", size=1)
+
+```
+
+## Summary
+The graph shows that from 2020 Q2 , there has been an increase in vacancies for those that are unemployed, corssing the 1.0 in approximately Q1 2021. This suggests that it could be an issue since  there are now more vacancies that those that are unemployed. More research should be conducted to deteremine the possible impact on Singapore. 
