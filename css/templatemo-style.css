@@ -4,7 +4,7 @@ Next Level CSS Template
 
 https://templatemo.com/tm-532-next-level
 
-	COLORS:
+:
 		Primary: #ca9acd
 		Secondary: #669999
     Gray: #CFD0D1
@@ -133,7 +133,7 @@ ul {
 /* Colors */
 
 .tm-text-secondary { color: #669999; }
-.tm-bg-primary { background-color: #ca9acd; }
+.tm-bg-primary { background-color: #667fed; }
 .tm-bg-gradient {
   background: linear-gradient(
     135deg,
